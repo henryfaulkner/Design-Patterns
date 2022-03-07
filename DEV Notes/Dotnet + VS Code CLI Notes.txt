@@ -1,0 +1,7 @@
+Create command-line project: $dotnet new console
+
+Add project to solution using: $dotnet sln add [project filepath]
+
+Build solution: $dotnet build Design-Patterns.sln
+
+Run a particular project: $dotnet run --project [project filepath]
