@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{B0FAE1E4-F73E-40B5-814C-27006BFC4FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{C95D3F4A-3B94-4BA9-B040-81714788DD85}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FactoryPattern", "FactoryPattern", "{C5A24397-2A08-473F-83E6-9C4C1F56CC8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFactory", "FactoryPattern\AnimalFactory\AnimalFactory.csproj", "{E6648C39-D0F4-4CE2-B736-29440E68519C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,5 +46,20 @@ Global
 		{C95D3F4A-3B94-4BA9-B040-81714788DD85}.Release|x64.Build.0 = Release|Any CPU
 		{C95D3F4A-3B94-4BA9-B040-81714788DD85}.Release|x86.ActiveCfg = Release|Any CPU
 		{C95D3F4A-3B94-4BA9-B040-81714788DD85}.Release|x86.Build.0 = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|x64.Build.0 = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Debug|x86.Build.0 = Debug|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|x64.ActiveCfg = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|x64.Build.0 = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6648C39-D0F4-4CE2-B736-29440E68519C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6648C39-D0F4-4CE2-B736-29440E68519C} = {C5A24397-2A08-473F-83E6-9C4C1F56CC8E}
 	EndGlobalSection
 EndGlobal
