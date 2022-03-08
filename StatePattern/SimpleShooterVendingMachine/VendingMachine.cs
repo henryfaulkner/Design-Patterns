@@ -32,12 +32,12 @@ namespace SimpleShooterVendingMachine
         {
             if (this.state == NO_DOLLAR)
             {
-                Console.WriteLine("Your dollar slides into the machine.");
+                Console.WriteLine("Your dollar slides into the machine.\n");
                 this.state = HAS_DOLLAR;
             }
             else if (this.state == HAS_DOLLAR)
             {
-                Console.WriteLine("Machine has a dollar already.");
+                Console.WriteLine("Machine has a dollar already.\n");
             }
             else if (this.state == SELL)
             {
@@ -53,11 +53,11 @@ namespace SimpleShooterVendingMachine
         {
             if (this.state == NO_DOLLAR)
             {
-                Console.WriteLine("You haven't inserted a dollar.");
+                Console.WriteLine("You haven't inserted a dollar.\n");
             }
             else if (this.state == HAS_DOLLAR)
             {
-                Console.WriteLine("You recieve your dollar back.");
+                Console.WriteLine("You recieve your dollar back.\n");
                 this.state = NO_DOLLAR;
             }
             else if (this.state == SELL)
@@ -74,7 +74,7 @@ namespace SimpleShooterVendingMachine
         {
             if (this.state == NO_DOLLAR)
             {
-                Console.WriteLine("You haven't inserted a dollar.");
+                Console.WriteLine("You haven't inserted a dollar.\n");
             }
             else if (this.state == HAS_DOLLAR)
             {
@@ -87,7 +87,7 @@ namespace SimpleShooterVendingMachine
             }
             else if (this.state == SOLD_OUT)
             {
-                Console.WriteLine("No more liquor in the machine");
+                Console.WriteLine("No more liquor in the machine.\n");
             }
         }
 
@@ -105,7 +105,7 @@ namespace SimpleShooterVendingMachine
             {
                 this.count = this.count - 1;
                 string selectedLiquor = RandomizeLiquorSelection();
-                Console.WriteLine($"You got {selectedLiquor}.");
+                Console.WriteLine($"You got {selectedLiquor}.\n");
                 if (this.count == 0)
                 {
                     this.state = SOLD_OUT;

@@ -4,13 +4,17 @@ namespace Driver
     {
         public struct Projects
         {
+            public struct Driver
+            {
+                public static string path => "Driver/bin/Debug/netcoreapp3.1/Driver.dll";
+                public static string nameSpace => "Driver";
+            }
 
             public struct AnimalFactory
             {
                 public static string path => "FactoryPattern/AnimalFactory/bin/Debug/netcoreapp3.1/AnimalFactory.dll";
                 public static string nameSpace => "AnimalFactory";
             }
-
 
             public struct SimpleShooterVendingMachine
             {

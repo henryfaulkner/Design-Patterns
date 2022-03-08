@@ -4,7 +4,7 @@ namespace AnimalFactory
     {
         public string Speak()
         {
-            return "Hello World";
+            return "Hello World\n\n";
         }
     }
 }

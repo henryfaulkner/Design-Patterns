@@ -12,33 +12,34 @@ namespace Driver
             try
             {
                 Assembly assembly = System.Reflection.Assembly.LoadFile(Path.GetFullPath(dll));
-                Console.WriteLine(Path.GetFullPath(dll));
-                Console.WriteLine(assembly.FullName);
+
                 if (assembly != null)
                 {
                     var type = assembly.GetType($"{nameSpace}.Program");
+                    object obj = Activator.CreateInstance(type);
 
-                    if (type == null) Console.WriteLine(assembly);
-                    else
+                    if (obj != null)
                     {
-                        object obj = Activator.CreateInstance(type);
-
-                        if (obj != null)
-                        {
-                            System.Reflection.MethodInfo method = type.GetMethod("Main");
-                            method.Invoke(obj, new object[0]);
-                        }
+                        System.Reflection.MethodInfo method = type.GetMethod("Main");
+                        method.Invoke(obj, new object[] { new String[0] });
                     }
                 }
             }
             catch (FileNotFoundException ex)
             {
-                Console.WriteLine($"FileNotFound:\n{ex.Message}");
+                Console.Write($"FileNotFound:\n{ex.Message}\n");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception:\n{ex.Message}");
+                Console.Write($"Exception:\n{ex.Message}\n");
             }
+        }
+
+        public static void ExitToDriver()
+        {
+            var driverPath = Constants.Projects.Driver.path;
+            var driverNameSpace = Constants.Projects.Driver.nameSpace;
+            Driver.DriverHelper.RunDLL(driverPath, driverNameSpace);
         }
     }
 

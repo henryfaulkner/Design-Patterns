@@ -1,16 +1,17 @@
 ﻿using System;
+using Driver;
 
 namespace SimpleShooterVendingMachine
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             VendingMachine vm = new VendingMachine(10);
 
             while (vm.GetState() != vm.GetSOLD_OUT())
             {
-                Console.Write("1 to insert dollar.\n2 to press button.\n3 to eject your dollar.\n");
+                Console.Write("1 to insert dollar.\n2 to press button.\n3 to eject your dollar.\n4 to leave the machine.\n\n");
                 string input = Console.ReadLine();
 
                 switch (input)
@@ -23,6 +24,9 @@ namespace SimpleShooterVendingMachine
                         break;
                     case "3":
                         vm.EjectDollar();
+                        break;
+                    case "4":
+                        Driver.DriverHelper.ExitToDriver();
                         break;
                 }
             }
