@@ -1,16 +1,16 @@
 ﻿using System;
 using Driver;
 
-namespace SimpleShooterVendingMachine
+namespace OOPShooterVendingMachine
 {
     class Program
     {
         public static void Main(string[] args)
         {
             bool gameLoop = true;
-            VendingMachine vm = new VendingMachine(10);
+            ShooterMachine sm = new ShooterMachine(10);
 
-            while (vm.GetState() != vm.GetSOLD_OUT() && gameLoop)
+            while (sm.state != sm.soldOutState && gameLoop)
             {
                 Console.Write("1 to insert dollar.\n2 to press button.\n3 to eject your dollar.\n4 to leave the machine.\n\n");
                 string input = Console.ReadLine();
@@ -18,13 +18,13 @@ namespace SimpleShooterVendingMachine
                 switch (input)
                 {
                     case "1":
-                        vm.InsertDollar();
+                        sm.InsertDollar();
                         break;
                     case "2":
-                        vm.PressButton();
+                        sm.PressButton();
                         break;
                     case "3":
-                        vm.EjectDollar();
+                        sm.EjectDollar();
                         break;
                     case "4":
                         gameLoop = !gameLoop;
