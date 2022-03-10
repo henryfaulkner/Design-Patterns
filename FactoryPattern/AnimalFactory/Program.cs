@@ -12,8 +12,8 @@ namespace AnimalFactory
             while (gameLoop)
             {
                 Console.Write("1 pokes a human.\n2 pokes a monkey.\n3 pokes a pig.\n4 leaves the zoo.\n\n");
-                var response = StringExtensions.ConvertIntToStringResponse(Console.ReadLine());
-                if (response == string.Empty) Console.Write("Invalid input.\n");
+                var response = StringExtensions.ConvertIntToStringResponse(Console.ReadKey(true).KeyChar);
+                if (response == string.Empty) Console.Write("Invalid input.\n\n");
                 else if (response == "exit")
                 {
                     Driver.DriverHelper.ExitToDriver();

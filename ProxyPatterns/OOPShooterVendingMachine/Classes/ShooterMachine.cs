@@ -12,14 +12,16 @@ namespace OOPShooterVendingMachine
 
         public IState state { get; set; }
         public int count { get; set; }
+        public string location { get; set; }
 
-        public ShooterMachine(int count)
+        public ShooterMachine(int count, string location)
         {
             noDollarState = new NoDollarState(this);
             hasDollarState = new HasDollarState(this);
             sellState = new SellState(this);
             soldOutState = new SoldOutState(this);
             state = soldOutState;
+            this.location = location;
 
             this.count = count;
             if (count > 0)
