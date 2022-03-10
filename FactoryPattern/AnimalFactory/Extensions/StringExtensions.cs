@@ -2,17 +2,17 @@ namespace AnimalFactory
 {
     public class StringExtensions
     {
-        public static string ConvertIntToStringResponse(string number)
+        public static string ConvertIntToStringResponse(char number)
         {
-            switch (number.Trim())
+            switch (number)
             {
-                case "1":
+                case '1':
                     return "human";
-                case "2":
+                case '2':
                     return "monkey";
-                case "3":
+                case '3':
                     return "pig";
-                case "4":
+                case '4':
                     return "exit";
                 default:
                     return string.Empty;
