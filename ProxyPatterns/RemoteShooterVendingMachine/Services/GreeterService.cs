@@ -19,7 +19,9 @@ namespace RemoteShooterVendingMachine
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello " + request.Name
+                ShootersAvailable = "error",
+                ShootersSold = "error",
+                FavoriteShooter = "error",
             });
         }
     }

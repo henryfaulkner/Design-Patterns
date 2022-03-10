@@ -39,8 +39,10 @@ namespace OOPShooterVendingMachine
             var channel = GrpcChannel.ForAddress(serverAddress);
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(
-                              new HelloRequest { Name = "OOPShooterVendingMachine" });
-            Console.WriteLine("Greeting: " + reply.Message);
+                              new HelloRequest { Location = "OOPShooterVendingMachine" });
+            Console.WriteLine("Shooters Available: " + reply.ShootersAvailable);
+            Console.WriteLine("Shooters Sold: " + reply.ShootersSold);
+            Console.WriteLine("Favorite Shooter: " + reply.FavoriteShooter);
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
 
