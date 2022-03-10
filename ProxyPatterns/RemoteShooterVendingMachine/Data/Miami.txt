@@ -1,3 +1,0 @@
-ShootersAvailable:500;
-ShootersSold:1273;
-FavoriteShooter:Vodka;

@@ -1,3 +1,0 @@
-ShootersAvailable:300;
-ShootersSold:657;
-FavoriteShooter:Henny;

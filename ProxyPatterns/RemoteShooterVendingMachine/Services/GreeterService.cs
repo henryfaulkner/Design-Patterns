@@ -17,11 +17,15 @@ namespace RemoteShooterVendingMachine
 
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
+            Console.Write($"{request.Location} machine hit.\n");
+
+            var reportDict = FileHelper.ParseFileForKeyValuePairs(request.Location);
+
             return Task.FromResult(new HelloReply
             {
-                ShootersAvailable = "error",
-                ShootersSold = "error",
-                FavoriteShooter = "error",
+                ShootersAvailable = reportDict["ShootersAvailable"],
+                ShootersSold = reportDict["ShootersSold"],
+                FavoriteShooter = reportDict["FavoriteShooter"],
             });
         }
     }

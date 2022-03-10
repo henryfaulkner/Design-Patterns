@@ -21,6 +21,12 @@ namespace Driver
                 public static string path => "StatePattern/SimpleShooterVendingMachine/bin/Debug/netcoreapp3.1/SimpleShooterVendingMachine.dll";
                 public static string nameSpace => "SimpleShooterVendingMachine";
             }
+
+            public struct VendingMachineMonitorClient
+            {
+                public static string path => "ProxyPatterns/OOPShooterVendingMachine/bin/Debug/netcoreapp3.1/OOPShooterVendingMachine.dll";
+                public static string nameSpace => "OOPShooterVendingMachine";
+            }
         }
     }
 }

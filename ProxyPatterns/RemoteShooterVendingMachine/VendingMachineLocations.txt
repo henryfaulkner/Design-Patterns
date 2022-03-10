@@ -1,5 +1,0 @@
-123,Atlanta
-50,Seattle
-200,New York
-75,Los Vegas
-60,Portland
