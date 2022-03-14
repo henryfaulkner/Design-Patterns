@@ -27,6 +27,12 @@ namespace Driver
                 public static string path => "ProxyPatterns/OOPShooterVendingMachine/bin/Debug/netcoreapp3.1/OOPShooterVendingMachine.dll";
                 public static string nameSpace => "OOPShooterVendingMachine";
             }
+
+            public struct ChocolateBoiler
+            {
+                public static string path => "SingletonPattern/bin/Debug/netcoreapp3.1/SingletonPattern.dll";
+                public static string nameSpace => "SingletonPattern";
+            }
         }
     }
 }
