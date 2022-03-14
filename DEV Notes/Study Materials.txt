@@ -1,0 +1,4 @@
+Principle book followed: Head First: Design Patterns
+
+Supplimental material:
+- Good website for visualizations: https://refactoring.guru/design-patterns
