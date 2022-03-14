@@ -6,13 +6,9 @@ namespace Driver
     {
         public static void Main(string[] args)
         {
-            bool gameLoop = true;
-
             Console.WriteLine("1 to visit the zoo.\n2 to visit the liquor vending machine.\n3 to monitor all liquor vending machines.\n4 to leave the park.\n\n");
             var input = Console.ReadKey(true).KeyChar;
 
-            //while (gameLoop)
-            //{
             switch (input)
             {
                 case '1':
@@ -31,7 +27,6 @@ namespace Driver
                     Environment.Exit(0);
                     break;
             }
-            //}
         }
     }
 }
