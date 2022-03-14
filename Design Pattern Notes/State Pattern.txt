@@ -1,3 +1,5 @@
+Pattern Type: Behavioral
+
 Pros:
 - Tried and true strategy to implement any state machine in OOP language
 

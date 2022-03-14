@@ -1,0 +1,11 @@
+Creational Patterns:
+These patterns provide object creation mechanisms.
+Increases flexibility and code reusablity.
+
+Structural Patterns:
+These patterns describe how to assemble objects and classes into larger structures.
+Maintains structural flexibility and efficiency.
+
+Behavioral Patterns:
+These patterns are concerned with algorithms 
+and the assignment of responsibilities between objects.
