@@ -6,7 +6,7 @@ namespace Driver
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("1 to visit the zoo.\n2 to visit the chocolate boiler.\n3 to visit the liquor vending machine.\n4 to monitor all liquor vending machines.\n5 to leave the park.\n\n");
+            Console.Write("1 to visit the zoo.\n2 to visit the chocolate boiler.\n3 to visit the liquor vending machine.\n4 to monitor all liquor vending machines.\n5 to visit the robot.\n6 to leave the park.\n\n");
             var input = Console.ReadKey(true).KeyChar;
 
             switch (input)
@@ -28,6 +28,10 @@ namespace Driver
                         Constants.Projects.VendingMachineMonitorClient.nameSpace);
                     break;
                 case '5':
+                    DriverHelper.RunDLL(Constants.Projects.Robot.path,
+                        Constants.Projects.Robot.nameSpace);
+                    break;
+                case '6':
                     Environment.Exit(0);
                     break;
             }

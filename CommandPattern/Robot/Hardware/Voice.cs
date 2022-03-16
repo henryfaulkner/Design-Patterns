@@ -8,11 +8,12 @@ namespace Robot
 {
     public class Voice
     {
-        string currentAction = string.Empty;
-        //This is shit bc it's not a relative path
-        //Must run project from repo parent folder or through driver
-        //Fix if have time 
-        string fortunesJsonPath = "CommandPattern/Robot/Fortunes/Fortunes.json";
+        string currentAction = null;
+
+        // These paths are shit bc they're not relative paths.
+        // Must run project from repo parent folder or through driver.
+        string fortunesJsonPath = "CommandPattern/Robot/RobotWords/Fortunes.json";
+        string swearsJsonPath = "CommandPattern/Robot/RobotWords/Swears.json";
 
         public void SetCurrentVocalType(string action)
         {
@@ -33,10 +34,26 @@ namespace Robot
             {
                 case ActionConstants.VocalType.Fortunes:
                     var fortune = GetRandomFortune();
-                    Console.WriteLine(fortune);
+                    Console.Write($"{fortune}\n");
                     break;
                 case ActionConstants.VocalType.Obsenities:
-                    currentAction = ActionConstants.VocalType.Obsenities;
+                    var swear = GetRandomSwear();
+                    Console.Write($"{swear}\n");
+                    break;
+            }
+        }
+
+        public void Off()
+        {
+            switch (currentAction)
+            {
+                case ActionConstants.VocalType.Fortunes:
+                    Console.Write("Robot stopped telling fortunes.\n\n");
+                    currentAction = null;
+                    break;
+                case ActionConstants.VocalType.Obsenities:
+                    Console.Write("Robot stopped shouting swears.\n\n");
+                    currentAction = null;
                     break;
             }
         }
@@ -51,12 +68,30 @@ namespace Robot
             }
         }
 
+        List<SwearModel> GetAllSwears()
+        {
+            using (StreamReader r = new StreamReader(swearsJsonPath))
+            {
+                string json = r.ReadToEnd();
+                List<SwearModel> swears = JsonConvert.DeserializeObject<List<SwearModel>>(json);
+                return swears;
+            }
+        }
+
         string GetRandomFortune()
         {
             List<FortuneModel> fortunes = GetAllFortunes();
             Random random = new Random();
             int index = random.Next(fortunes.Count);
             return fortunes[index].fortune;
+        }
+
+        string GetRandomSwear()
+        {
+            List<SwearModel> swears = GetAllSwears();
+            Random random = new Random();
+            int index = random.Next(swears.Count);
+            return $"{swears[index].swear.ToUpper()}!!";
         }
     }
 }

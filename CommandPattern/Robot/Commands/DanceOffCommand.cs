@@ -10,7 +10,7 @@ namespace Robot
 
         public void Execute()
         {
-            body.On();
+            body.Off();
         }
     }
 }

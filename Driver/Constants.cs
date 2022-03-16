@@ -33,6 +33,12 @@ namespace Driver
                 public static string path => "SingletonPattern/bin/Debug/netcoreapp3.1/SingletonPattern.dll";
                 public static string nameSpace => "SingletonPattern";
             }
+
+            public struct Robot
+            {
+                public static string path => "CommandPattern/Robot/bin/Debug/netcoreapp3.1/Robot.dll";
+                public static string nameSpace => "Robot";
+            }
         }
     }
 }

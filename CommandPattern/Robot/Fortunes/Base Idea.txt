@@ -10,5 +10,6 @@ to classify fortune api (https://helloacm.com/fortune/)
 
 robot actions
 - tell fortune
-- cook burger 
+- tell what he can do (help menu)
 - have shout obsenities
+- dance
