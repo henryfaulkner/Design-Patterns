@@ -1,0 +1,14 @@
+Fortune Teller Machine
+
+- User should be able to ask for a classified fortune 
+
+- Use Natural Language Processing (NLP) and Machine Learning (ML) 
+to classify fortune api (https://helloacm.com/fortune/)
+
+- Base fortunes are sourced from http://www.fortunecookiemessage.com/
+
+
+robot actions
+- tell fortune
+- cook burger 
+- have shout obsenities

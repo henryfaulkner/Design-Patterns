@@ -1,1 +1,3 @@
 Pattern Type: Structural
+
+My implementation of gRPC makes use of prototype pattern.
