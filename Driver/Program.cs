@@ -7,7 +7,7 @@ namespace Driver
         public static void Main(string[] args)
         {
             Console.Write("1 to visit the zoo.\n2 to visit the chocolate boiler.\n3 to visit the liquor vending machine.\n4 to monitor all liquor vending machines.\n5 to visit the robot.\n6 to leave the park.\n\n");
-            var input = Console.ReadKey(true).KeyChar;
+            var input = '5';//Console.ReadKey(true).KeyChar;
 
             switch (input)
             {

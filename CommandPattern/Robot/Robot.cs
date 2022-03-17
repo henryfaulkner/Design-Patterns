@@ -2,7 +2,7 @@ namespace Robot
 {
     public class Robot
     {
-        ICommand action;
+        public ICommand action { get; set; }
 
         public Robot() { }
 

@@ -34,11 +34,11 @@ namespace Robot
             {
                 case ActionConstants.VocalType.Fortunes:
                     var fortune = GetRandomFortune();
-                    Console.Write($"{fortune}\n");
+                    Console.Write($"{fortune}\n\n");
                     break;
                 case ActionConstants.VocalType.Obsenities:
                     var swear = GetRandomSwear();
-                    Console.Write($"{swear}\n");
+                    Console.Write($"{swear}\n\n");
                     break;
             }
         }

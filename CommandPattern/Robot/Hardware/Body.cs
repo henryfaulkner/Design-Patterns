@@ -13,7 +13,7 @@ namespace Robot
 
         public void On()
         {
-            Console.Write("*Robot is dancing*\n");
+            Console.Write("*Robot is dancing*\n\n");
         }
 
         public void Off()
