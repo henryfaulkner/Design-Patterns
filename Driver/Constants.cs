@@ -39,6 +39,12 @@ namespace Driver
                 public static string path => "CommandPattern/Robot/bin/Debug/netcoreapp3.1/Robot.dll";
                 public static string nameSpace => "Robot";
             }
+
+            public struct Cafe
+            {
+                public static string path => "TemplateMethodPattern/Cafe/bin/Debug/netcoreapp3.1/Cafe.dll";
+                public static string nameSpace => "Cafe";
+            }
         }
     }
 }

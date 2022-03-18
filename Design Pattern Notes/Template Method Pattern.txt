@@ -1,0 +1,12 @@
+Pattern Type: Behavioral
+
+Purpose: The Template Pattern encapsulates a general 
+algorithm in one place and lets subclasses redefine 
+certain steps without changing the algorithm's structure.
+
+Hooks: 
+- A hook is a method defined in the abstract class
+but is given a empty or default implementation.
+This gives subclasses the ability to “hook into” 
+the algorithm at various points, but can be ignored
+if one chooses to do so.

@@ -1,0 +1,4 @@
+Pattern Type: Structural
+
+Purpose: To enable the use of a class in an instance 
+which requires a class of a different interface
