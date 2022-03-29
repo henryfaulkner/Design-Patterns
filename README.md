@@ -5,5 +5,5 @@ Studying various design pattern strategies with C# and .NET. Cohesive and intera
     $git clone https://github.com/henryfaulkner/Design-Patterns.git
     
 ## How to run the solution: 
-    - Download the dotnet CLI
+    - Download the .NET CLI
     $dotnet build; dotnet run --project Driver
